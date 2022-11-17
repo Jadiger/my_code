@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100%;
+}
+.row {
+    height: 100%;
+}
+.menu_btn {
+    display: none;
+ }
+ .navbar {
+    display: block;
+ }
+ h1 {
+    font-size: 25px;
+ }
+
+header {
+    color: #fff;
+    height: 10vh;
+    background: linear-gradient(to right top, rgb(71, 147, 224), rgb(198, 57, 210));
+}
+
+ .menu_btn {
+    display: block;
+    text-align: right;
+ }
+ .menu_btn i {
+    display: inline-block;
+    font-size: 40px;
+ }
+
+ .navbar {
+    position: fixed;
+    top:0;
+    right:0;
+    transform: translate(100%,0);
+    z-index: 30;
+    height: 100vh;
+    width: 70%;
+    transition: transform 0.3s;
+ }
+ .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items:center;
+    background-color:#fff;
+    color:#000;
+ }
+ header li {
+    list-style: none;
+    font-size: 22px;
+ }
+main {
+    min-height: 90vh;
+    background:url('../img/main_back.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+}
+.card {
+    background-color:rgba(255, 255, 255, 0.744);
+    text-align: center;
+    padding: 20px;
+}
+.card img {
+    height: 25vh;
+}
+.padding {
+    padding: 10px;
+}
+.overlay {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    bottom:0;
+    background-color:rgba(0, 0, 0, 0.525);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+.close_btn i {
+    font-size: 30px;
+    color:#000;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+ @media screen and (min-width:768px) {
+    .menu_btn {
+        display: none;
+     }
+     .navbar {
+        position: static;
+        width: 100%;
+        height: 100%;
+        transform: translate(0,0);
+     }
+     .navbar ul {
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        transform: translate(0,0);
+        color:#fff;
+        background-color:transparent;
+     }
+     h1 {
+        font-size: 2rem;
+     }
+     main {
+        height: 90vh;
+
+     }
+     .close_btn {
+        display: none;
+     }
+ }
